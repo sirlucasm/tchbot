@@ -9,6 +9,6 @@ class Database:
     def exec():
         db = TinyDB('src/database/db.json', create_dirs=True)
 
-    def insert(tableName, data):
-        table = db.table('users')
+    async def insert(tableName, data):
+        table = db.table(tableName)
         table.insert(data)

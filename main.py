@@ -16,7 +16,7 @@ async def main():
         App.bot()
         App.selectUser()
         username = input('write here: ')
-        if (username == '6'):
+        if username == '6':
             break
 
     if (username == '6'):
@@ -30,11 +30,11 @@ async def main():
         App.items()
         select = int(input('select an option: '))
 
-        if (select > 4 or select < 1 or select == ''):
+        if select > 4 or select < 1 or select == '':
             print('Please select a valid option\n')
             os.system('pause')
             select = 0
-        if (select == 4):
+        if select == 4:
             App.consoleClear()
             print('\nbye!\n')
             break
@@ -44,7 +44,6 @@ async def main():
             App.createAccounts()
             selectNewAccountsNumber = int(input('how many accounts do you want? '))
             await bot.createAccounts(selectNewAccountsNumber)
-            # await bot.emailVerify('teste1')
             break
 
 # exec main
